@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Les chiens</string>
+    <string name="nom_du_chien">Nom du chien</string>
+    <string name="taille">Taille</string>
+    <string name="photo">photo</string>
+    <string name="prix">prix</string>
+</resources>
