@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements DogItemClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //this.mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.bruit_chien);
+        this.mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.bruit_chien);
 
         recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
         // use this setting to
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements DogItemClickListe
 
     public void playSound(View view){
 
-        //mediaPlayer.start();
+        mediaPlayer.start();
 
     }
 }
