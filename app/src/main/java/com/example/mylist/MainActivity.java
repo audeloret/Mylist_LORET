@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.mylist.model.Breed;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,24 +33,13 @@ public class MainActivity extends AppCompatActivity implements DogItemClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Controller controller = new Controller(this);
+        controller.start();
+
         this.mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.bruit_chien);
 
         recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
-        // use this setting to
-        // improve performance if you know that changes
-        // in content do not change the layout size
-        // of the RecyclerView
-        recyclerView.setHasFixedSize(true);
-        // use a linear layout manager
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
 
-        Controller controller = new Controller();
-        controller.start();
-        mesChiens = new ArrayList<>();
-
-        chiensAdapteur = new ChienAdapter(mesChiens, this);
-        recyclerView.setAdapter(chiensAdapteur);
     }
 
     @Override
@@ -57,6 +48,15 @@ public class MainActivity extends AppCompatActivity implements DogItemClickListe
         startActivity(photoIntent);
     }
 
+    public void showList(List<Breed> list){
+        recyclerView.setHasFixedSize(true);
+        // use a linear layout manager
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+
+        chiensAdapteur = new ChienAdapter(list, this);
+        recyclerView.setAdapter(chiensAdapteur);
+    }
 
     public void playSound(View view){
 

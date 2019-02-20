@@ -13,8 +13,7 @@ import retrofit2.http.Query;
 public interface CatRestApi {
 
 
-    @Headers("x-api-key: DEMO-API-KEY")
-    @GET("breeds")
+    @GET("dogs.json")
     Call<List<Breed>> getListBreed();
 }
 

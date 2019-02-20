@@ -18,8 +18,13 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Controller {
 
+    private MainActivity activity;
 
-    static final String BASE_URL = "https://api.thecatapi.com/v1/";
+    static final String BASE_URL = "https://audeloret.github.io/";
+
+    public Controller(MainActivity mainActivity) {
+        this.activity = mainActivity;
+    }
 
     public void start() {
         Gson gson = new GsonBuilder()
@@ -40,6 +45,7 @@ public class Controller {
             @Override
             public void onResponse(Call<List<Breed>> call, Response<List<Breed>> response) {
                 List<Breed> listBreed = response.body();
+                activity.showList(listBreed);
             }
 
             @Override

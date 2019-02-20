@@ -10,6 +10,8 @@ import java.util.List;
 
 import android.view.View.OnClickListener;
 
+import com.example.mylist.model.Breed;
+
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.http.GET;
@@ -17,7 +19,7 @@ import retrofit2.http.GET;
 public class ChienAdapter extends RecyclerView.Adapter<ChienAdapter.ViewHolder> {
 
     private DogItemClickListener listener;
-    private List<Chiens> values;
+    private List<Breed> values;
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -36,7 +38,7 @@ public class ChienAdapter extends RecyclerView.Adapter<ChienAdapter.ViewHolder> 
         }
     }
 
-    public void add(int position, Chiens item) {
+    public void add(int position, Breed item) {
         values.add(position, item);
         notifyItemInserted(position);
     }
@@ -47,7 +49,7 @@ public class ChienAdapter extends RecyclerView.Adapter<ChienAdapter.ViewHolder> 
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public ChienAdapter(List<Chiens> myDataset, DogItemClickListener listener) {
+    public ChienAdapter(List<Breed> myDataset, DogItemClickListener listener) {
         values = myDataset;
         this.listener = listener;
     }
@@ -70,9 +72,9 @@ public class ChienAdapter extends RecyclerView.Adapter<ChienAdapter.ViewHolder> 
     public void onBindViewHolder(ViewHolder holder, final int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        Chiens chien = values.get(position);
-        holder.txtName.setText(chien.getNomChien());
-        holder.txtPrix.setText(chien.getPrix());
+        Breed breed = values.get(position);
+        holder.txtName.setText(breed.getName());
+        //holder.txtPrix.setText(breed.getPrix());
 
         holder.itemView.setOnClickListener(new OnClickListener() {
             @Override

@@ -1,10 +1,9 @@
 <resources>
     <string name="app_name">Les chiens</string>
-    <string name="nom_du_chien">Nom du chien</string>
-    <string name="taille">Taille</string>
-    <string name="photo">photo</string>
-    <string name="prix">prix</string>
-    <string name="dalmatien">Dalmatien</string>
-    <string name="_1500">1500€</string>
+
+    <string name="name"></string>
+    <string image="image"> </string>
+
     <string name="play_music_btn">Aboiement</string>
+    <string name="prix">prix</string>
 </resources>
