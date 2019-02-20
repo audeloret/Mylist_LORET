@@ -10,6 +10,10 @@ import java.util.List;
 
 import android.view.View.OnClickListener;
 
+import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
+import retrofit2.http.GET;
+
 public class ChienAdapter extends RecyclerView.Adapter<ChienAdapter.ViewHolder> {
 
     private DogItemClickListener listener;

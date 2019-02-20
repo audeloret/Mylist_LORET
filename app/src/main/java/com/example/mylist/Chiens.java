@@ -7,6 +7,7 @@ public class Chiens {
 
     private String nomChien;
     private float prix;
+    private String url;
 
     public Chiens(String nomChien, float prix) {
         this.nomChien = nomChien;

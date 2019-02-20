@@ -1,6 +1,7 @@
 package com.example.mylist;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -19,15 +20,18 @@ public class MainActivity extends AppCompatActivity implements DogItemClickListe
     private RecyclerView recyclerView;
     private ChienAdapter chiensAdapteur;
 
-    public static void main(String[] args) {
-        Controller controller = new Controller();
-        controller.start();
-    }
+
+
+    private MediaPlayer mediaPlayer;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //this.mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.bruit_chien);
 
         recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
         // use this setting to
@@ -39,21 +43,9 @@ public class MainActivity extends AppCompatActivity implements DogItemClickListe
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
+        Controller controller = new Controller();
+        controller.start();
         mesChiens = new ArrayList<>();
-        mesChiens.add(new Chiens("Azawakh", 1500F));
-        mesChiens.add(new Chiens("Braque de Weimar", 750.00F));
-        mesChiens.add(new Chiens("Caniche Royal", 1000F));
-        mesChiens.add(new Chiens("Dalmatien", 900F));
-        mesChiens.add(new Chiens("Fox Terrier", 850.00F));
-        mesChiens.add(new Chiens("Golden Retriever", 1000F));
-        mesChiens.add(new Chiens("Husky Sibérien", 1150F));
-        mesChiens.add(new Chiens("Jack Russel", 1000F));
-        mesChiens.add(new Chiens("Labrador", 800F));
-        mesChiens.add(new Chiens("Pomsky", 2900F));
-        mesChiens.add(new Chiens("Russkiy Toy", 2000F));
-        mesChiens.add(new Chiens("Saluki", 950F));
-        mesChiens.add(new Chiens("Teckel", 1150F));
-
 
         chiensAdapteur = new ChienAdapter(mesChiens, this);
         recyclerView.setAdapter(chiensAdapteur);
@@ -64,7 +56,12 @@ public class MainActivity extends AppCompatActivity implements DogItemClickListe
         Intent photoIntent = new Intent(this, SecondActivity.class);
         startActivity(photoIntent);
     }
+
+
+    public void playSound(View view){
+
+        //mediaPlayer.start();
+
+    }
 }
-
-
 

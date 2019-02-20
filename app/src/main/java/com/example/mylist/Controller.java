@@ -1,8 +1,11 @@
 package com.example.mylist;
 
+import android.util.Log;
+
 import java.util.List;
 
 
+import com.example.mylist.model.Breed;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -13,10 +16,10 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 
-public class Controller implements Callback<List<Change>>  {
+public class Controller {
 
 
-    static final String BASE_URL = "https://git.eclipse.org/r/";
+    static final String BASE_URL = "https://api.thecatapi.com/v1/";
 
     public void start() {
         Gson gson = new GsonBuilder()
@@ -28,25 +31,27 @@ public class Controller implements Callback<List<Change>>  {
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
 
-        GerritAPI gerritAPI = retrofit.create(GerritAPI.class);
+        CatRestApi catRestApi = retrofit.create(CatRestApi.class);
 
-        Call<List<Change>> call = gerritAPI.loadChanges("status:open");
-        call.enqueue(this);
+        Call<List<Breed>> call = catRestApi.getListBreed();
+
+        call.enqueue(new Callback<List<Breed>>() {
+
+            @Override
+            public void onResponse(Call<List<Breed>> call, Response<List<Breed>> response) {
+                List<Breed> listBreed = response.body();
+            }
+
+            @Override
+            public void onFailure(Call<List<Breed>> call, Throwable t) {
+                Log.d("ERROR", "Api Error");
+
+            }
+        });
+
+
 
     }
 
-    @Override
-    public void onResponse(Call<List<Change>> call, Response<List<Change>> response) {
-        if(response.isSuccessful()) {
-            List<Change> changesList = response.body();
-        } else {
-            System.out.println(response.errorBody());
-        }
-    }
-
-    @Override
-    public void onFailure(Call<List<Change>> call, Throwable t) {
-        t.printStackTrace();
-    }
 
 }

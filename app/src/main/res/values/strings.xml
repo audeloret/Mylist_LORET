@@ -4,4 +4,7 @@
     <string name="taille">Taille</string>
     <string name="photo">photo</string>
     <string name="prix">prix</string>
+    <string name="dalmatien">Dalmatien</string>
+    <string name="_1500">1500€</string>
+    <string name="play_music_btn">Aboiement</string>
 </resources>
