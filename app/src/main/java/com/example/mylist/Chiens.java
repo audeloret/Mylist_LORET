@@ -25,7 +25,7 @@ public class Chiens {
     }
 
     public String getNomChien() {
-        return nomChien;
+        return String.valueOf(nomChien);
     }
 
     public String getPrix() {

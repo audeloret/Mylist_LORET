@@ -1,6 +1,8 @@
 package com.example.mylist;
 
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.widget.ImageView;
 
 import java.util.List;
 
@@ -14,6 +16,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.http.Url;
 
 
 public class Controller {
@@ -21,6 +24,9 @@ public class Controller {
     private MainActivity activity;
 
     static final String BASE_URL = "https://audeloret.github.io/";
+
+    //activity = (MainActivity) findViewById(R.id.my_url);
+    //activity = (MainActivity) getApplicationContext();
 
     public Controller(MainActivity mainActivity) {
         this.activity = mainActivity;

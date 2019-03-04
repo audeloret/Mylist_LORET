@@ -21,9 +21,6 @@ public class MainActivity extends AppCompatActivity implements DogItemClickListe
     private ArrayList<Chiens> mesChiens;
     private RecyclerView recyclerView;
     private ChienAdapter chiensAdapteur;
-
-
-
     private MediaPlayer mediaPlayer;
 
 

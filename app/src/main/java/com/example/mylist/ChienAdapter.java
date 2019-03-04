@@ -73,7 +73,7 @@ public class ChienAdapter extends RecyclerView.Adapter<ChienAdapter.ViewHolder> 
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
         Breed breed = values.get(position);
-        holder.txtName.setText(breed.getName());
+        holder.txtName.setText(breed.getListeChiens().get(position).getNomChien());
         //holder.txtPrix.setText(breed.getPrix());
 
         holder.itemView.setOnClickListener(new OnClickListener() {

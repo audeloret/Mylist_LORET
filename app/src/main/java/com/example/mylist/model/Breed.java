@@ -19,39 +19,30 @@ public class Breed {
         this.listeChiens = listeChiens;
     }
 
-    /*private String name;
-
-    public String getName() {
-        return name;
+/*
+        private String nomChien;
+        public String getNomChien() {
+        return nomChien;
+    }
+    public void setNomChien(String nomChien) {
+        this.nomChien = nomChien;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-
-
-    private String prix;
-
-    public String getPrix() {
+        private float prix;
+        public float getPrix() {
         return prix;
     }
-
-    public void setPrix(String prix) {
+    public void setPrix(float prix) {
         this.prix = prix;
     }
 
-    private Image
-
-
-    private String image;
-
-    public String getImage() {
-        return image;
+        private String url;
+        public String getUrl() {
+        return url;
     }
-
-    public void setImage(String image) {
-        this.image = image;
-    }*/
+    public void setUrl(String url) {
+        this.url = url;
+    }
+*/
 
 }
