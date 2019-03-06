@@ -74,7 +74,7 @@ public class ChienAdapter extends RecyclerView.Adapter<ChienAdapter.ViewHolder> 
         // - replace the contents of the view with that element
         final Chiens chien = values.get(position);
         holder.txtName.setText(chien.getNomChien());
-        //holder.txtPrix.setText(breed.getPrix());
+        holder.txtPrix.setText(chien.getPrix());
 
         holder.itemView.setOnClickListener(new OnClickListener() {
             @Override

@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.example.mylist.model.Chiens;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,7 +43,10 @@ public class MainActivity extends AppCompatActivity implements DogItemClickListe
 
 
         //Se donner les infos du chien
-        photoIntent.putExtra("CLE", chien.getUrl());
+        Gson gson = new Gson();
+        String chienJson = gson.toJson(chien);
+
+        photoIntent.putExtra("CLE", chienJson);
 
         startActivity(photoIntent);
     }
@@ -58,9 +62,8 @@ public class MainActivity extends AppCompatActivity implements DogItemClickListe
     }
 
     public void playSound(View view){
-
         mediaPlayer.start();
-
     }
 }
 
+//06.27.57.45.15 text me!

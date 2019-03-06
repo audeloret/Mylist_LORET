@@ -11,13 +11,13 @@ public class Chiens {
 
     @SerializedName("prix")
     @Expose
-    private float prix;
+    private String prix;
 
     @SerializedName("imageUrl")
     @Expose
     private String url;
 
-    public Chiens(String nomChien, float prix, String url) {
+    public Chiens(String nomChien, String prix, String url) {
         this.nomChien = nomChien;
         this.prix = prix;
         this.url = url;

@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.mylist.model.Chiens;
+import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
 public class SecondActivity extends AppCompatActivity {
@@ -20,11 +22,12 @@ public class SecondActivity extends AppCompatActivity {
 
         imgChien = findViewById(R.id.img_chien);
 
-        String valeur = getIntent().getStringExtra("CLE");
-
+        String chienJson = getIntent().getStringExtra("CLE");
+        Gson gson = new Gson();
+        Chiens chien = gson.fromJson(chienJson, Chiens.class);
         //Recuperer l'objet Chien
         Picasso.with(getBaseContext())
-                .load(valeur)
+                .load(chien.getUrl())
                 .into(imgChien);
 
     }
