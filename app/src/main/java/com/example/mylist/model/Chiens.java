@@ -1,4 +1,4 @@
-package com.example.mylist;
+package com.example.mylist.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -21,8 +21,8 @@ public class Chiens {
         this.nomChien = nomChien;
         this.prix = prix;
         this.url = url;
-
     }
+
 
     public String getNomChien() {
         return String.valueOf(nomChien);

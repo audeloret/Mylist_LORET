@@ -7,7 +7,7 @@ import android.widget.ImageView;
 import java.util.List;
 
 
-import com.example.mylist.model.Breed;
+import com.example.mylist.model.Chiens;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -44,18 +44,18 @@ public class Controller {
 
         CatRestApi catRestApi = retrofit.create(CatRestApi.class);
 
-        Call<List<Breed>> call = catRestApi.getListBreed();
+        Call<List<Chiens>> call = catRestApi.getListBreed();
 
-        call.enqueue(new Callback<List<Breed>>() {
+        call.enqueue(new Callback<List<Chiens>>() {
 
             @Override
-            public void onResponse(Call<List<Breed>> call, Response<List<Breed>> response) {
-                List<Breed> listBreed = response.body();
+            public void onResponse(Call<List<Chiens>> call, Response<List<Chiens>> response) {
+                List<Chiens> listBreed = response.body();
                 activity.showList(listBreed);
             }
 
             @Override
-            public void onFailure(Call<List<Breed>> call, Throwable t) {
+            public void onFailure(Call<List<Chiens>> call, Throwable t) {
                 Log.d("ERROR", "Api Error");
 
             }

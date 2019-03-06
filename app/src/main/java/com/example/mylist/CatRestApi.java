@@ -1,7 +1,7 @@
 package com.example.mylist;
 
 
-import com.example.mylist.model.Breed;
+import com.example.mylist.model.Chiens;
 
 import java.util.List;
 
@@ -14,6 +14,6 @@ public interface CatRestApi {
 
 
     @GET("dogs.json")
-    Call<List<Breed>> getListBreed();
+    Call<List<Chiens>> getListBreed();
 }
 

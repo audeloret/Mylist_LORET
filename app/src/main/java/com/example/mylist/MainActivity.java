@@ -7,11 +7,8 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ListView;
-import android.widget.TextView;
 
-import com.example.mylist.model.Breed;
+import com.example.mylist.model.Chiens;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements DogItemClickListe
 
         recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
 
+
     }
 
     @Override
@@ -45,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements DogItemClickListe
         startActivity(photoIntent);
     }
 
-    public void showList(List<Breed> list){
+    public void showList(List<Chiens> list){
         recyclerView.setHasFixedSize(true);
         // use a linear layout manager
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
