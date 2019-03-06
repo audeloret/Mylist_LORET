@@ -20,8 +20,11 @@ public class SecondActivity extends AppCompatActivity {
 
         imgChien = findViewById(R.id.img_chien);
 
+        String valeur = getIntent().getStringExtra("CLE");
+
+        //Recuperer l'objet Chien
         Picasso.with(getBaseContext())
-                .load("https://d17fnq9dkz9hgj.cloudfront.net/breed-uploads/2018/08/chihuahua-detail.jpg?bust=1535565487&width=630")
+                .load(valeur)
                 .into(imgChien);
 
     }

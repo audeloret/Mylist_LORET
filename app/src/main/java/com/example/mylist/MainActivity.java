@@ -34,12 +34,16 @@ public class MainActivity extends AppCompatActivity implements DogItemClickListe
 
         recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
 
-
     }
 
     @Override
-    public void onItemClick(View view, int position) {
+    public void onItemClick(Chiens chien) {
         Intent photoIntent = new Intent(this, SecondActivity.class);
+
+
+        //Se donner les infos du chien
+        photoIntent.putExtra("CLE", chien.getUrl());
+
         startActivity(photoIntent);
     }
 
