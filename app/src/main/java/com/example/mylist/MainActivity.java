@@ -7,12 +7,11 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-
 import com.example.mylist.model.Chiens;
 import com.google.gson.Gson;
-
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class MainActivity extends AppCompatActivity implements DogItemClickListener {
 
@@ -21,19 +20,20 @@ public class MainActivity extends AppCompatActivity implements DogItemClickListe
     private ChienAdapter chiensAdapteur;
     private MediaPlayer mediaPlayer;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
 
         Controller controller = new Controller(this);
         controller.start();
 
+        recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
+
         this.mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.bruit_chien);
 
-        recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
 
     }
 
@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements DogItemClickListe
 
         chiensAdapteur = new ChienAdapter(list, this);
         recyclerView.setAdapter(chiensAdapteur);
+
     }
 
     public void playSound(View view){
@@ -66,4 +67,4 @@ public class MainActivity extends AppCompatActivity implements DogItemClickListe
     }
 }
 
-//06.27.57.45.15 text me!
+//06.27.57.45.15

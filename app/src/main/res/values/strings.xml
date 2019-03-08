@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">Les chiens</string>
 
-    <string name="name"> Race </string>
+    <string name="name">  </string>
     <string image="image"> Photos </string>
 
     <string name="play_music_btn">Aboiement</string>
-    <string name="prix"> €</string>
+    <string name="prix"> </string>
+    <string name="img_chien">img_chien</string>
 </resources>
