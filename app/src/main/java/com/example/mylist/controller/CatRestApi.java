@@ -1,4 +1,4 @@
-package com.example.mylist;
+package com.example.mylist.controller;
 
 
 import com.example.mylist.model.Chiens;

@@ -1,4 +1,4 @@
-package com.example.mylist;
+package com.example.mylist.view;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.mylist.R;
 import com.example.mylist.model.Chiens;
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
@@ -29,8 +30,5 @@ public class SecondActivity extends AppCompatActivity {
         Picasso.with(getBaseContext())
                 .load(chien.getUrl())
                 .into(imgChien);
-
     }
-
-
 }

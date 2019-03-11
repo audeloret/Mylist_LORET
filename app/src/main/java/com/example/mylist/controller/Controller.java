@@ -1,12 +1,11 @@
-package com.example.mylist;
+package com.example.mylist.controller;
 
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.widget.ImageView;
 
 import java.util.List;
 
 
+import com.example.mylist.view.MainActivity;
 import com.example.mylist.model.Chiens;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -16,7 +15,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.http.Url;
 
 
 public class Controller {

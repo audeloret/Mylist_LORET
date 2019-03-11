@@ -1,4 +1,4 @@
-package com.example.mylist;
+package com.example.mylist.view;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -7,7 +7,11 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+
+import com.example.mylist.R;
+import com.example.mylist.controller.Controller;
 import com.example.mylist.model.Chiens;
+import com.example.mylist.controller.DogItemClickListener;
 import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.List;
@@ -33,16 +37,14 @@ public class MainActivity extends AppCompatActivity implements DogItemClickListe
         recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
 
         this.mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.bruit_chien);
-
-
     }
 
     @Override
     public void onItemClick(Chiens chien) {
+
         Intent photoIntent = new Intent(this, SecondActivity.class);
 
-
-        //Se donner les infos du chien
+        // Se donner les infos du chien
         Gson gson = new Gson();
         String chienJson = gson.toJson(chien);
 
@@ -52,14 +54,15 @@ public class MainActivity extends AppCompatActivity implements DogItemClickListe
     }
 
     public void showList(List<Chiens> list){
+
         recyclerView.setHasFixedSize(true);
-        // use a linear layout manager
+
+        // Utilisation linear layout manager
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
         chiensAdapteur = new ChienAdapter(list, this);
         recyclerView.setAdapter(chiensAdapteur);
-
     }
 
     public void playSound(View view){

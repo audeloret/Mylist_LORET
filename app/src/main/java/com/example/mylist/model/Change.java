@@ -1,4 +1,4 @@
-package com.example.mylist;
+package com.example.mylist.model;
 
 public class Change {
     String subject;

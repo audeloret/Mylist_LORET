@@ -1,20 +1,17 @@
-package com.example.mylist;
+package com.example.mylist.view;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import java.util.List;
-
 import android.view.View.OnClickListener;
 
+import com.example.mylist.R;
+import com.example.mylist.controller.DogItemClickListener;
 import com.example.mylist.model.Chiens;
 
-import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
-import retrofit2.http.GET;
 
 public class ChienAdapter extends RecyclerView.Adapter<ChienAdapter.ViewHolder> {
 
@@ -24,6 +21,7 @@ public class ChienAdapter extends RecyclerView.Adapter<ChienAdapter.ViewHolder> 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
     // you provide access to all the views for a data item in a view holder
+
     public class ViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
         public TextView txtName;
