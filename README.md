@@ -32,7 +32,7 @@ Exemple :
 
 ## Architecture 
 
-J'ai modélisé une architecture MVC Model View Controller
+J'ai modélisé une architecture MVC Model View Controller : 
 
 ```bash
 Controller  
