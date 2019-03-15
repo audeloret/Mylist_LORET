@@ -1,10 +1,6 @@
 package com.example.mylist.controller;
-
-
 import com.example.mylist.model.Chiens;
-
 import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Headers;

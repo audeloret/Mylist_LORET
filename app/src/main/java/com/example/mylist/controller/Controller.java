@@ -1,15 +1,11 @@
 package com.example.mylist.controller;
 
 import android.util.Log;
-
 import java.util.List;
-
-
 import com.example.mylist.view.MainActivity;
 import com.example.mylist.model.Chiens;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
