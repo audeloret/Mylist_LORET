@@ -19,4 +19,5 @@ J'ai modélisé une architecture MVC Model View Controller
 
 ## Design
 
-![img_1](https://github.com/audeloret/Mylist_LORET/blob/master/img_1.png)
+![img_1](https://github.com/audeloret/Mylist_LORET/blob/master/img_1.png) ![img_2](https://github.com/audeloret/Mylist_LORET/blob/master/img_2.png)
+
