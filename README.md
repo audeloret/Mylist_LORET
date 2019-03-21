@@ -1,9 +1,9 @@
-# My dogs
+# APPLICATION MY DOGS 
 
-## Description du projet
+## Présentation du projet
 
-My dogs est une application qui utilise une RecyclerView et un appel WebService à une API Rest.
-Elle comporte 2 écrans : un avec une liste des races de chiens, un son mp3 d'aboiement ainsi que leurs prix et un autre écran avec une photo de la race du chien.
+My dogs est une application qui utilise une RecyclerView et un appel WebService à une API Rest codé en java.
+Elle affiche 2 écrans : un avec une liste des races de chiens, un son mp3 d'aboiement ainsi que leurs prix et un autre écran avec une photo de la race du chien. Elle utilise une API que j'ai créée.
 
 
 ## Choix de l'API REST
@@ -30,6 +30,15 @@ Exemple :
 ```
 
 
+## Consignes respectées 
+
+   - Deux écrans : Un écran avec une liste et un écran avec un détail de l’item.
+   - RecyclerView 
+   - Appel WebService à une API Rest.
+   - Architecture : MVC
+   - Autre fonctionnalité : son mp3 
+
+
 ## Architecture 
 
 J'ai modélisé une architecture MVC Model View Controller : 
@@ -50,11 +59,16 @@ View
 - SecondActivity
 ```
 
+## Fonctionnalités 
+### Premier écran
 
-## Design
+- Liste avec le nom de la race du chien, un bouton qui fait un bruit d'aboiement et le prix :
 
-Mon application est une liste avec le nom de la race du chien, un bouton qui fait un bruit d'aboiement et le prix. 
-En cliquant sur une race de chien, on découvre une image associé.
+![img_1](https://github.com/audeloret/Mylist_LORET/blob/master/img_1.png) 
 
-![img_1](https://github.com/audeloret/Mylist_LORET/blob/master/img_1.png) ![img_2](https://github.com/audeloret/Mylist_LORET/blob/master/img_2.png)
+### Deuxième écran
+
+- En cliquant sur une race de chien, on découvre une image associé.
+
+![img_2](https://github.com/audeloret/Mylist_LORET/blob/master/img_2.png)
 
